@@ -3,7 +3,8 @@ package dsa.problems.strings;
 //public class AtoiImplement {
 //}
 
-class AtoiImplement {
+class AtoiImplement
+{
     public int myAtoi(String s) {
 
         int i =0;

@@ -10,12 +10,13 @@ class AddBinary {
             int curr = carry;
             curr += i>=0 ? a.charAt(i--)-'0':0;
             curr += j>=0 ? b.charAt(j--)-'0':0;
-            sb.append(curr%2);
-            carry = curr/2;
+            sb.append(curr%2); // this is give remainder
+            carry = curr/2; //this will give quotient value
 
         }
 
         sb.reverse();
+        //if they asked us to remove leading zeroes - we need to enable this condition check
         // int k =0;
         // while(k<sb.length() && sb.charAt(k)=='0'){
         //     k++;

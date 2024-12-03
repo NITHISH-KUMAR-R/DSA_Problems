@@ -56,4 +56,39 @@ class KMPAlgorithm {
 
     }
 }
+//Problem 2:/// Min Chars to Add for Palindrome geeks for geeks
+class Solution {
+    public static int [] computeLps(String s){
+        int n = s.length();
+        int lps[] = new int[n];
+        int i =1;
+        int len =0;
 
+        while(i<n){
+            if(s.charAt(i)==s.charAt(len)){
+                len++;
+                lps[i] = len;
+                i++;
+            }else{
+                if(len!=0){
+                    len = lps[len-1];
+                }else{
+                    len =0;
+                    i++;
+                }
+            }
+        }
+        return lps;
+    }
+    public static int minChar(String s) {
+        String sb = new StringBuilder(s).reverse().toString();
+        String combined = s + "#" + sb;
+
+        int[] lps = computeLps(combined);
+
+        return s.length() - lps[combined.length() - 1];
+
+
+        // Write your code here
+    }
+}

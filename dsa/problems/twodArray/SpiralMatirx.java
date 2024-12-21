@@ -43,3 +43,8 @@ public class SpiralMatirx {
         }
     }
 }
+
+//left , right, top , top++
+//top bottom right , right --
+// right , left , bottom , bottom --;
+//bottom top , left , left --

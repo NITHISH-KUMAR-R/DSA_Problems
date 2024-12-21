@@ -57,5 +57,5 @@ public class Rotate90Degree {
 }
 
 
-//Hint Clockwise - reverse each row after transpose
-//Hint anticlockwise - reverse each column after transponse
+//Hint Clockwise - reverse each row after transpose - i,k, i,j
+//Hint anticlockwise - reverse each column after transpose k,i  j,i

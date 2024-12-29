@@ -1,5 +1,7 @@
 package dsa.problems.twodArray;
 
+import java.util.Arrays;
+
 public class Search2D {
     class Solution {
         public boolean searchMatrix(int[][] matrix, int target) {
@@ -25,7 +27,7 @@ public class Search2D {
     }
 }
 
-class Solution {
+class Solution2 {
 
     public boolean searchRowMatrix(int[][] mat, int x) {
 

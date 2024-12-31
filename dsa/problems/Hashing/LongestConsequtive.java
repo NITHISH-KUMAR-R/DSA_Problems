@@ -6,7 +6,7 @@ public class LongestConsequtive {
     class Solution {
         public int longestConsecutive(int[] nums) {
 
-            HashSetC<Integer> set = new HashSet<>();
+            HashSet<Integer> set = new HashSet<>();
             for(int num :nums){
                 set.add(num);
             }

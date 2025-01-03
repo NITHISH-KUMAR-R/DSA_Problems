@@ -9,7 +9,7 @@ public class SubarrayXor {
         public long subarrayXor(int arr[], int k) {
             // code here
 
-            Map<Integer,Integer> map = new HashMap<>(c);
+            Map<Integer,Integer> map = new HashMap<>();
             map.put(0,1);
             int count =0;
             int sum =0;

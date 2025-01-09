@@ -1,7 +1,9 @@
 package dsa.problems.interview;
 
+import java.util.Arrays;
+
 public class Closest3sum {
-    import java.util.Arrays;
+
 
     public class Solution {
         public int threeSumClosest(int[] nums, int target) {
@@ -38,5 +40,5 @@ public class Closest3sum {
             return closestSum;
         }
     }
-c
+
 }

@@ -26,5 +26,5 @@ public class TappingRainWater {
             }
             return total_water;
         }
-    }c
+    }
 }

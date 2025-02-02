@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BinaryTree {
+public class LevelOrderTrav {
     class Solution {
         public ArrayList<ArrayList<Integer>> levelOrder(Node root) {
             // Your code here

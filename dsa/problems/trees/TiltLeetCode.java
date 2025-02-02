@@ -3,21 +3,18 @@ package dsa.problems.trees;
 import javax.swing.tree.TreeNode;
 
 public class TiltLeetCode {
-    /**
-     * Definition for a binary tree node.
-     * public class TreeNode {
-     *     int val;
-     *     TreeNode left;
-     *     TreeNode right;
-     *     TreeNode() {}
-     *     TreeNode(int val) { this.val = val; }
-     *     TreeNode(int val, TreeNode left, TreeNode right) {
-     *         this.val = val;
-     *         this.left = left;
-     *         this.right = right;
-     *     }
-     * }
-     */
+           public class TreeNode {
+           int val;
+           TreeNode left;
+           TreeNode right;
+           TreeNode() {}
+           TreeNode(int val) { this.val = val; }
+           TreeNode(int val, TreeNode left, TreeNode right) {
+               this.val = val;
+               this.left = left;
+               this.right = right;
+           }
+       }
     class Solution {
         int total =0;
         public int calculate(TreeNode root){
@@ -30,7 +27,7 @@ public class TiltLeetCode {
             int max = Math.abs(left-right);
             total+=max;
 
-            return root.valc+left+right;
+            return root.val+left+right;
         }
         public int findTilt(TreeNode root) {
             calculate(root);

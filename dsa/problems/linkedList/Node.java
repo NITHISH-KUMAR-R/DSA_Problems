@@ -1,5 +1,5 @@
 package dsa.problems.linkedList;
-class Node {
+public class Node {
     int value;
     int data;
     Node next;

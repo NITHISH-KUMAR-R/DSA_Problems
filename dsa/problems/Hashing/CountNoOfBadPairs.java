@@ -40,7 +40,7 @@ public class CountNoOfBadPairs {
 
             for(int i =0;i<nums.length;i++){
                 int key = nums[i]-i;
-                goodPair +cd= map.getOrDefault(key,0);
+                goodPair += map.getOrDefault(key,0);
                 map.put(key,map.getOrDefault(key,0)+1);
             }
 

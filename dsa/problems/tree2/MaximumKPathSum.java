@@ -25,7 +25,7 @@ public class MaximumKPathSum {
         public int sumK(Node root, int k) {
             // code here
 
-            Map<Integer,Integer> map = new HashMap<>(c);
+            Map<Integer,Integer> map = new HashMap<>();
             map.put(0,1);
             return helper(root,0,map,k);
         }

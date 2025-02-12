@@ -1,4 +1,4 @@
-package dsa.problems.tree2;
+package dsa.problems.treeBst;
 
 public class Node {
     int data;

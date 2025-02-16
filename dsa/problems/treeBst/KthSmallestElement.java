@@ -1,6 +1,9 @@
 package dsa.problems.treeBst;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class KthSmallestElement {
     class Solution {
         int ans = -1;
@@ -26,6 +29,25 @@ public class KthSmallestElement {
             return ans;
         }
 
+    }
+    class Solution2 {
+        public int kthSmallest(Node root, int k) {
+            List<Integer> inorderList = new ArrayList<>();
+            inorderTraversal(root, inorderList);
+
+            // If k is larger than the number of nodes, return -1
+            if (k > inorderList.size() || k <= 0) return -1;
+
+            return inorderList.get(k - 1);  // k-th smallest element (1-based index)
+        }
+
+        void inorderTraversal(Node root, List<Integer> list) {
+            if (root == null) return;
+
+            inorderTraversal(root.left, list);
+            list.add(root.data);
+            inorderTraversal(root.right, list);
+        }
     }
 
     }

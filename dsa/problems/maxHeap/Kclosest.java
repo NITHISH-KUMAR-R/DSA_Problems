@@ -1,4 +1,4 @@
-package dsa.problems.minHeap.maxHeap;
+package dsa.problems.maxHeap;
 
 import java.util.PriorityQueue;
 

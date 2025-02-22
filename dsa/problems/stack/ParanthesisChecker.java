@@ -1,4 +1,4 @@
-package dsa.problems.algorithms.stack;
+package dsa.problems.stack;
 
 import java.util.Stack;
 

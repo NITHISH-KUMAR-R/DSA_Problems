@@ -29,7 +29,7 @@ public class NextGreaterElement {
 
 
             ArrayList<Integer> list = new ArrayList<>();
-            Stackc<Integer> st = new Stack<>();
+            Stack<Integer> st = new Stack<>();
 
             for(int i = arr.length-1;i>=0;i--){
                 while(!st.isEmpty() && st.peek()<=arr[i]){

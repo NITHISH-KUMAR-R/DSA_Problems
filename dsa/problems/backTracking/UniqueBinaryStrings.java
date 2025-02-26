@@ -21,7 +21,7 @@ public class UniqueBinaryStrings {
         public String findDifferentBinaryString(String[] nums) {
 
             int n = nums[0].length();
-            Set<String> set = new HashSet<>(c);
+            Set<String> set = new HashSet<>();
             for(String c : nums){
                 set.add(c);
             }

@@ -10,7 +10,7 @@ public class KadanesProblem {
         int curr = arr[0];
 
         for(int i =1;i<arr.length;i++){
-            curr = Math.max(arr[i], arr[i]+curr);
+            curr = Math.max(arr[i], Math.abs(arr[i]+curr));
             max = Math.max(curr, max);
         }
         return max;

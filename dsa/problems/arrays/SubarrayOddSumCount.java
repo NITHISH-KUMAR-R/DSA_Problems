@@ -35,7 +35,7 @@ class Solution2 {
 
         for (int i = 0; i < arr.length; i++) {
             sum += arr[i];
-            if (sum % 2 == 1) {
+            if (sum % 2 !=0) {
                 result = (result + even) % MOD;
                 odd++;
             } else {

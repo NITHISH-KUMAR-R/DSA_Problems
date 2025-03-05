@@ -1,6 +1,7 @@
 package dsa.problems.dp;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 
 public class LongestStringChain {

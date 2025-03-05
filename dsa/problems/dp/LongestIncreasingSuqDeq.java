@@ -1,4 +1,4 @@
-package dsa.problems.doublyLinkedList.dp;
+package dsa.problems.dp;
 
 import java.util.Arrays;
 

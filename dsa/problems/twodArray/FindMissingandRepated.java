@@ -29,3 +29,8 @@ public class FindMissingandRepated {
         }
     }
 }
+
+//2965. Find Missing and Repeated Values
+//Find the repeating and missing numbers:
+//If present[num] is already true, it's the repeating number.
+//If any index i remains false, it's the missing number.

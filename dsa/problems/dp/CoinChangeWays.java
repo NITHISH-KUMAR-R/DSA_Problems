@@ -15,6 +15,30 @@ public class CoinChangeWays {
             return dp[sum];
         }
     }
+    class Solution2Darray {
+        public int count(int coins[], int sum) {
+            int n = coins.length;
+            int[][] dp = new int[n + 1][sum + 1];
+
+            // Base case: If sum is 0, there is 1 way (by selecting no coins)
+            for (int i = 0; i <= n; i++) {
+                dp[i][0] = 1;
+            }
+
+            // Fill the DP table
+            for (int i = 1; i <= n; i++) {
+                for (int j = 0; j <= sum; j++) {
+                    if (coins[i - 1] > j) { // Exclude the coin if it's larger than sum
+                        dp[i][j] = dp[i - 1][j];
+                    } else { // Include the coin + exclude the coin
+                        dp[i][j] = dp[i - 1][j] + dp[i][j - coins[i - 1]];
+                    }
+                }
+            }
+
+            return dp[n][sum];
+        }
+    }
 }
 //GFG
 ///Input: coins[] = [1, 2, 3], sum = 4

@@ -25,3 +25,7 @@ public class MiniumCoin {
         }
     }
 }
+
+//Input: coins[] = [25, 10, 5], sum = 30
+//Output: 2
+//Explanation: Minimum 2 coins needed, 25 and 5

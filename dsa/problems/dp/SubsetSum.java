@@ -2,10 +2,7 @@ package dsa.problems.dp;
 
 public class SubsetSum {
     class Solution {
-
         static Boolean isSubsetSum(int arr[], int sum) {
-            // code here
-
             int n  = arr.length;
 
             boolean [][] dp = new boolean[n+1][sum+1];

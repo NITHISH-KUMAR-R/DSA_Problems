@@ -31,7 +31,7 @@ public class MiniumCoin {
 
             int dp[][] = new int[coins.length+1][sum+1];
 
-            for (int i = 0; i <= coins.length; i++) {
+            for (int i = 0; i <coins.length; i++) {
                 Arrays.fill(dp[i], Integer.MAX_VALUE - 1);
             }
             for (int i = 0; i <= coins.length; i++) {

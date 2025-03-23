@@ -30,6 +30,7 @@ public class DecodeString {
                     for (int i = 0; i < times; i++) {
                         temp.append(str);
                     }
+                    //reuse same StringBuilder for next operation append empty
                     str = temp;
 
                 }else{

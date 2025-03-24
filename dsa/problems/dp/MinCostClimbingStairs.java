@@ -17,3 +17,4 @@ public class MinCostClimbingStairs {
         }
     }
 }
+//746. Min Cost Climbing Stairs

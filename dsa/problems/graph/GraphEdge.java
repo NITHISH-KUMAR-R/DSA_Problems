@@ -1,6 +1,8 @@
 package dsa.problems.graph;
 
 public class GraphEdge {
+
+
     public final int source;
     public final int destination;
     public final int weight;
@@ -9,6 +11,18 @@ public class GraphEdge {
         this.source = source;
         this.destination = destination;
         this.weight = weight;
+    }
+
+    public int getSource() {
+        return source;
+    }
+
+    public int getDestination() {
+        return destination;
+    }
+
+    public int getWeight() {
+        return weight;
     }
 
     @Override

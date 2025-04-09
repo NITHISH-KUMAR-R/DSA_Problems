@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class DFS {
     class Solution {
 
-        public static void dfsTraversal(int node,
-                                        ArrayList<ArrayList<Integer>> adj, ArrayList<Integer> list , boolean[] visited){
+        public static void dfsTraversal(int node, ArrayList<ArrayList<Integer>> adj,
+                                        ArrayList<Integer> list , boolean[] visited){
 
             visited[node] = true;
             list.add(node);

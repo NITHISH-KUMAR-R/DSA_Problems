@@ -53,3 +53,5 @@ public class CloneGraph {
         }
     }
 }
+
+//Works for directed and undirected graph

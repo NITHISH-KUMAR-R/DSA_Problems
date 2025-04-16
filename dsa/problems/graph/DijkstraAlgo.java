@@ -34,18 +34,18 @@ public class DijkstraAlgo {
             Arrays.fill(distance, Integer.MAX_VALUE);
             PriorityQueue<GraphEdge> pq = new PriorityQueue<>(Comparator.comparingInt(GraphEdge::getWeight));
 
-            Map<Integer, List<GraphEdge>> graph = new HashMap<>();
+            Map<Integer, List<GraphEdge>> adjGraphMap = new HashMap<>();
 
             for (int i = 0; i < V; i++) {
-                graph.put(i, new ArrayList<>());
+                adjGraphMap.put(i, new ArrayList<>());
             }
 
             for (int[] edge : edges) {
                 int source = edge[0];
                 int destination = edge[1];
                 int weight = edge[2];
-                graph.get(source).add(new GraphEdge(source, destination, weight));
-                graph.get(destination).add(new GraphEdge(destination, source, weight));
+                adjGraphMap.get(source).add(new GraphEdge(source, destination, weight));
+                adjGraphMap.get(destination).add(new GraphEdge(destination, source, weight));
             }
 
             distance[src] = 0;
@@ -55,7 +55,7 @@ public class DijkstraAlgo {
                 GraphEdge curr = pq.poll();
                 int sourceNode = curr.getDestination();
 
-                for (GraphEdge neighbor : graph.get(sourceNode)) {
+                for (GraphEdge neighbor : adjGraphMap.get(sourceNode)) {
                     int destination = neighbor.getDestination();
                     int newDist = distance[sourceNode] + neighbor.getWeight();
 

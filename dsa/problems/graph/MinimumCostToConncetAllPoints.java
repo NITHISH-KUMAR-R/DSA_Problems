@@ -16,39 +16,48 @@ public class MinimumCostToConncetAllPoints {
                 this.weight = weight;
             }
 
-            public int getSource() { return source; }
-            public int getDestination() { return destination; }
-            public int getWeight() { return weight; }
+            public int getSource() {
+                return source;
+            }
+
+            public int getDestination() {
+                return destination;
+            }
+
+            public int getWeight() {
+                return weight;
+            }
         }
+
         private int manhattanDist(int[] p1, int[] p2) {
             return Math.abs(p1[0] - p2[0]) + Math.abs(p1[1] - p2[1]);
         }
 
         public int minCostConnectPoints(int[][] points) {
-            int n =points.length;
+            int n = points.length;
 
             PriorityQueue<GraphEdge> pq = new PriorityQueue<>(Comparator.comparingInt(GraphEdge::getWeight));
-            int totalWeight =0;
-            int edgesUsed =0;
-            boolean  visited[] = new boolean[n];
+            int totalWeight = 0;
+            //int edgesUsed =0;
+            boolean visited[] = new boolean[n];
             visited[0] = true;
 
-            for(int i=1;i<n;i++){
-                int weight = manhattanDist(points[0],points[i]);
-                pq.offer(new GraphEdge(0,i,weight));
+            for (int destination = 0; destination < n; destination++) {
+                int weight = manhattanDist(points[0], points[destination]);
+                pq.offer(new GraphEdge(0, destination, weight));
             }
 
-            while(!pq.isEmpty()){
+            while (!pq.isEmpty()) {
                 GraphEdge graph = pq.poll();
-                int dest = graph.getDestination();
-                if(visited[dest]==true) continue;
-                visited[dest]= true;
+                int source = graph.getDestination();
+                if (visited[source] == true) continue;
+                visited[source] = true;
                 totalWeight += graph.getWeight();
 
-                for(int i =0;i<n;i++){
-                    if(visited[i]!=true){
-                        int weight = manhattanDist(points[dest], points[i]);
-                        pq.offer(new GraphEdge(dest,i,weight));
+                for (int destination = 0; destination < n; destination++) {
+                    if (visited[destination] != true) {
+                        int weight = manhattanDist(points[source], points[destination]);
+                        pq.offer(new GraphEdge(source, destination, weight));
                     }
                 }
 
@@ -57,4 +66,6 @@ public class MinimumCostToConncetAllPoints {
             return totalWeight;
         }
     }
+
+
 }

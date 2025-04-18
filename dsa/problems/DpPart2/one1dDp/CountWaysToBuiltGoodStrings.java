@@ -25,3 +25,5 @@ public class CountWaysToBuiltGoodStrings {
         }
     }
 }
+
+//2466. Count Ways To Build Good Strings

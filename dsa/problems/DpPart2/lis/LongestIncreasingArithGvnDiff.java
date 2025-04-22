@@ -1,5 +1,7 @@
 package dsa.problems.DpPart2.lis;
 
+import java.util.HashMap;
+
 public class LongestIncreasingArithGvnDiff {
     class Solution {
         public int longestSubsequence(int[] arr, int difference) {
@@ -30,4 +32,27 @@ public class LongestIncreasingArithGvnDiff {
         }
     }
 
+
 }
+
+class Solution {
+    public int longestSubsequence(int[] arr, int difference) {
+        // HashMap to store the longest subsequence length for each value
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int maxLength = 0;
+
+        // Iterate through the array
+        for (int num : arr) {
+            // If there's a subsequence ending with num - difference, extend it
+            int prev = num - difference;
+            int newLength = map.getOrDefault(prev, 0) + 1;
+            map.put(num, newLength);
+
+            // Update the maxLength
+            maxLength = Math.max(maxLength, newLength);
+        }
+
+        return maxLength;
+    }
+}
+

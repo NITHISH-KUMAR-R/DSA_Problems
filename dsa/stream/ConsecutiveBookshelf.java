@@ -11,19 +11,18 @@ public class ConsecutiveBookshelf {
         for (int i = 0; i < books.length; i++) {
             int book = books[i];
             if (lastSeen.containsKey(book)) {
-                //int shelfSize = i - lastSeen.get(book) + 1;
-                int value = lastSeen.get(book);
-                minShelfSize = Math.min(value+i, minShelfSize);
+                int prevIndex = lastSeen.get(book);
+                int shelfSize = i - prevIndex + 1;
+                minShelfSize = Math.min(shelfSize, minShelfSize);
             }
             lastSeen.put(book, i);
         }
 
-        return (minShelfSize == Integer.MAX_VALUE) ? -1 : minShelfSize+1;
+        return (minShelfSize == Integer.MAX_VALUE) ? -1 : minShelfSize;
     }
 
     public static void main(String[] args) {
-        int[] books = {5, 1, 9, 5, 2, 6,5,1,5};
-        System.out.println(consecutiveBookshelfMin(books)); // Output: 4
+        int[] books = {5, 1, 9, 5, 2, 6, 5, 1, 5};
+        System.out.println(consecutiveBookshelfMin(books)); // Output: 2
     }
 }
-

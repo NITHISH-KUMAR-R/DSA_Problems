@@ -16,7 +16,7 @@ public class JumpGame {
                 if(arr[curr]<0) continue;
 
                 if(curr+arr[curr]<arr.length) q.add(curr+arr[curr]);
-                if(curr-arr[curr]>0) q.add(curr-arr[curr]);
+                if(curr-arr[curr]>=0) q.add(curr-arr[curr]);
                 arr[curr] = -arr[curr];
 
 

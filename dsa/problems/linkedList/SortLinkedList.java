@@ -3,6 +3,7 @@ package dsa.problems.linkedList;
 public class SortLinkedList {
 
     class Solution {
+
         static Node segregate(Node head) {
             // code here
 
@@ -40,4 +41,36 @@ public class SortLinkedList {
 
         }
     }
+
+    //Approch 2
+    class Solution2 {
+        static Node segregate(Node head) {
+
+
+            Node temp = head;
+            int colorCount[] = new int[3];
+            while(temp!=null){
+                colorCount[temp.data]++;
+                temp = temp.next;
+            }
+
+            temp = head;
+            int i =0;
+
+            while(temp!=null){
+                if(colorCount[i]==0){
+                    i++;
+                }else{
+                    temp.data= i;
+                    colorCount[i]--;
+                    temp= temp.next;
+                }
+            }
+
+            return head;
+
+        }
+    }
+
+
 }

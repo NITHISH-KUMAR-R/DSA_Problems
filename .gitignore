@@ -18,3 +18,7 @@ Thumbs.db
 Crashpad/
 BrowserMetrics*
 EdgeEDrop*
+
+# Compiled Java files
+out/
+*.class

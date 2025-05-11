@@ -30,6 +30,7 @@ public class MinimumCostToConncetAllPoints {
         }
 
         private int manhattanDist(int[] p1, int[] p2) {
+
             return Math.abs(p1[0] - p2[0]) + Math.abs(p1[1] - p2[1]);
         }
 

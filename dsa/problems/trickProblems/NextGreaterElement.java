@@ -26,6 +26,7 @@ public class NextGreaterElement {
         }
         if(index==-1){
             reverse(arr,0,n-1);
+            return arr;
         }
         for(int i= n-1;i>=index;i--){
             if(arr[i]>arr[index]){
@@ -54,6 +55,6 @@ public class NextGreaterElement {
 
     }
     public static void main(String a[]){
-        System.out.println(nextGreaterElementWithSameDigits(218765));
+        System.out.println(nextGreaterElementWithSameDigits(21));
     }
 }

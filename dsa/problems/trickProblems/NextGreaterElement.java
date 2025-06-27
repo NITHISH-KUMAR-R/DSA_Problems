@@ -25,7 +25,6 @@ public class NextGreaterElement {
             }
         }
         if(index==-1){
-            reverse(arr,0,n-1);
             return arr;
         }
         for(int i= n-1;i>=index;i--){
@@ -41,12 +40,13 @@ public class NextGreaterElement {
     public static  int nextGreaterElementWithSameDigits(int n) {
 
         String numStr = String.valueOf(n);
-        //System.out.println(numStr);
+        System.out.println(numStr);
         int[] arr = new int[numStr.length()];
         for (int i = 0; i < numStr.length(); i++) {
             arr[i] = numStr.charAt(i) - '0'; // Convert char digit to int
         }
         int nums[]= nextPermutation(arr);
+        if(nums.equals(arr)) return -1;
         int result =0;
         for(int num: nums){
             result = result*10+num;

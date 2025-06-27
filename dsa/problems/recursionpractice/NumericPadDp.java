@@ -1,5 +1,7 @@
 package dsa.problems.recursionpractice;
 
+import java.util.Arrays;
+
 public class NumericPadDp {
 
         // Directions: stay, up, down, left, right

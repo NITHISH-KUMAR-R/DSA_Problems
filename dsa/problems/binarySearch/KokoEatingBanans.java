@@ -37,7 +37,13 @@ public class KokoEatingBanans {
         System.out.println("Coco can eat "+minEatingSpeed(piles, h));
 
         //canEatInTime(piles,6,8);
+        System.out.println(Math.ceil(4/5));
         //System.out.println(Math.ceil(double)10/6));
+        int hour =  0;
+        for(int p : piles){
+            hour+= (int) Math.ceil((double) p/3);
+        }
+        System.out.println(hour);
 
     }
 }

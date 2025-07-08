@@ -1,13 +1,12 @@
 package dsa.interview;
 
 public class GridTwoDirection {
-    public class MaxPathSumValueOnly {
 
         static int[][] grid;
 
         public static int maxPathSum(int row, int col, int m, int n) {
             // Out of bounds
-            if (row < 0 || col >= n) return Integer.MIN_VALUE;
+            if (row < 0 || col >= n) return Integer.MAX_VALUE;
 
             // Reached destination
             if (row == 0 && col == n - 1) {
@@ -19,7 +18,7 @@ public class GridTwoDirection {
             int moveRight = maxPathSum(row, col + 1, m, n);
 
             // Return max of the two + current cell value
-            return grid[row][col] + Math.max(moveUp, moveRight);
+            return grid[row][col] + Math.min(moveUp, moveRight);
         }
 
         public static void main(String[] args) {
@@ -37,4 +36,4 @@ public class GridTwoDirection {
         }
     }
 
-}
+

@@ -1,5 +1,7 @@
 package dsa.problems.trickProblems;
 
+import java.util.Arrays;
+
 public class NextGreaterElement {
     public static void swap(int arr[], int i, int j){
         int temp = arr[i];
@@ -40,13 +42,13 @@ public class NextGreaterElement {
     public static  int nextGreaterElementWithSameDigits(int n) {
 
         String numStr = String.valueOf(n);
-        System.out.println(numStr);
         int[] arr = new int[numStr.length()];
         for (int i = 0; i < numStr.length(); i++) {
             arr[i] = numStr.charAt(i) - '0'; // Convert char digit to int
         }
+        int[] original = arr.clone();
         int nums[]= nextPermutation(arr);
-        if(nums.equals(arr)) return -1;
+        if(Arrays.equals(nums,original)) return -1;
         int result =0;
         for(int num: nums){
             result = result*10+num;
@@ -55,6 +57,6 @@ public class NextGreaterElement {
 
     }
     public static void main(String a[]){
-        System.out.println(nextGreaterElementWithSameDigits(21));
+        System.out.println(nextGreaterElementWithSameDigits(12443322));
     }
 }

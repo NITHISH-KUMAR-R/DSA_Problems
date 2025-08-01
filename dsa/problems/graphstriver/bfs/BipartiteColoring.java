@@ -30,7 +30,8 @@ public class BipartiteColoring {
         }
         public boolean isBipartite(int V, int[][] edges) {
             List<Integer>[] graph = new ArrayList[V];
-            for (int i = 0; i < V; i++) graph[i] = new ArrayList<>();
+            for (int i = 0; i < V; i++)
+                graph[i] = new ArrayList<>();
             for (int[] edge : edges) {
                 graph[edge[0]].add(edge[1]);
                 graph[edge[1]].add(edge[0]);

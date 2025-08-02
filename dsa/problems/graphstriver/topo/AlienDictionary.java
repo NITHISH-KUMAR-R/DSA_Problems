@@ -6,9 +6,8 @@ import java.util.List;
 import java.util.Queue;
 
 public class AlienDictionary {
-        List<Integer> topoSort(int V, List<List<Integer>> adj, boolean[] present) {
+        List<Integer> topoSort( List<List<Integer>> adj, boolean[] present) {
             int[] indegree = new int[26];
-
             for (int i = 0; i < 26; i++) {
                 for (int j : adj.get(i)) {
                     indegree[j]++;
@@ -54,11 +53,9 @@ public class AlienDictionary {
             for (int i = 0; i < words.length - 1; i++) {
                 String s1 = words[i];
                 String s2 = words[i + 1];
-
                 if (s1.length() > s2.length() && s1.startsWith(s2)) {
                     return "";
                 }
-
                 int len = Math.min(s1.length(), s2.length());
                 for (int j = 0; j < len; j++) {
                     if (s1.charAt(j) != s2.charAt(j)) {
@@ -70,7 +67,7 @@ public class AlienDictionary {
                 }
             }
 
-            List<Integer> topo = topoSort(26, adj, present);
+            List<Integer> topo = topoSort(adj, present);
 
             // If cycle detected (not all present characters are in topo)
             int totalChars = 0;

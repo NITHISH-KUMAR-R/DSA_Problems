@@ -19,6 +19,7 @@ public class Leetcode1334 {
                 int arr [] = pq.poll();
                 int node = arr[0];
                 int d = arr[1];
+                if(d>dist[node]) continue;
                 for(int neighbor[] : adj.get(node)){
                     int nextNode = neighbor[0];
                     int weight = neighbor[1];

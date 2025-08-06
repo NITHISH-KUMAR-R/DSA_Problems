@@ -5,20 +5,18 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.PriorityQueue;
 
+//1976. Number of Ways to Arrive at Destination
 public class NoofWaysToDestination {
         public int countPaths(int n, int[][] roads) {
-
             List<List<int[]>> adj = new ArrayList<>();
             for (int i = 0; i < n; i++) {
                 adj.add(new ArrayList<>());
             }
-
             for (int[] r : roads) {
                 int u = r[0], v = r[1], w = r[2];
                 adj.get(u).add(new int[]{v, w});
                 adj.get(v).add(new int[]{u, w});
             }
-
             long[] dist = new long[n];
             Arrays.fill(dist, Long.MAX_VALUE);
             dist[0] = 0;

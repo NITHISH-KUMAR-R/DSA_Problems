@@ -1,4 +1,4 @@
-package dsa.problems.DpPart2.knapsack;
+package dsa.problems.DpPart2.knapsack.knapsackZeroOne;
 
 public class Subsetsum {
     public static boolean subSet(int arr[], int target){

@@ -1,4 +1,4 @@
-package dsa.problems.DpPart2.knapsack;
+package dsa.problems.DpPart2.knapsack.knapsackZeroOne;
 
 
 import java.util.ArrayList;

@@ -23,8 +23,8 @@ public class RodCutting {
 
             int dp[] = new int[n+1];
 
-            for(int i =1;i<=n;i++){
-                for(int j = i ;j<=n;j++){
+            for(int i =1;i<=n;i++){//len
+                for(int j = i ;j<=n;j++){//rod
                     dp[j] = Math.max(dp[j], dp[j-i]+price[i-1]);
                 }
             }

@@ -47,12 +47,9 @@ public class KmpAlgorithm {
                     }
                 }
             }
-
             return list;
             //The LPS array tells us how much we can shift the pattern
             //when a mismatch happens, without re-checking characters we already know match.
-
-
         }
     }
 

@@ -1,4 +1,4 @@
-package dsa.problems.stringimp;
+package dsa.problems.stringimp.kmp;
 
 import java.util.ArrayList;
 
@@ -34,17 +34,14 @@ public class KmpAlgorithm {
                 if(txt.charAt(i)==pat.charAt(j)){
                     i++;
                     j++;
-
                     if(j==pat.length()){
                         list.add(i-j);
                         j = dp[j-1];
                     }
                 }else{
-                    if(j!=0){
+                    if(j!=0)
                         j= dp[j-1];
-                    }else{
-                        i++;
-                    }
+                    else i++;
                 }
             }
             return list;

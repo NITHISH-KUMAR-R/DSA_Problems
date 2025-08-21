@@ -1,7 +1,6 @@
 package dsa.problems.binarySearch;
 
 public class SearchinAlmostSortedArray {
-    class Solution {
         public int findTarget(int arr[], int target) {
             int i = 0;
             int j = arr.length - 1;
@@ -29,4 +28,4 @@ public class SearchinAlmostSortedArray {
             return -1;
         }
     }
-}
+

@@ -1,6 +1,6 @@
 package dsa.problems.binarySearch;
 
-public class SearchinRotatedSorted2DArray {
+public class SearchinFullRotatedSorted2DArray {
     public boolean searchMatrix(int[][] mat, int x) {
         // code here
         int m = mat.length;

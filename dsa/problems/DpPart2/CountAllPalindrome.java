@@ -14,7 +14,7 @@ public class CountAllPalindrome {
                 // include subsequences inside + subsequences with i or j + 1 new palindrome (s[i..j])
                 dp[i][j] = (1 + helper(s, i + 1, j) + helper(s, i, j - 1)) % MOD;
             } else {
-                // inclusion-exclusion
+                // inclusion-exclusion - exculding the same charcacter in middle abc - ab bc  - b
                 dp[i][j] = (MOD + helper(s, i + 1, j) + helper(s, i, j - 1) - helper(s, i + 1, j - 1)) % MOD;
             }
 
